@@ -41,7 +41,7 @@
 
 ## 🎙️ Hands-Free Voice Interaction
 
-1. Say **"Liny"** (or click the floating mascot button / press `Ctrl+Alt+Space`).
+1. Say **"Computer"** (or click the floating mascot button / press `Ctrl+Alt+Space`).
 2. An audio chime plays, and the orb indicator turns electric cyan (`Listening...`).
 3. Speak your command naturally:
    - *"What's on my screen?"*
