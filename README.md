@@ -93,7 +93,7 @@ liny_desktop_assistant/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/liny-desktop-ai.git
+git clone https://github.com/Amiranu/Liny-Desktop-AI.git
 cd liny-desktop-ai
 ```
 
