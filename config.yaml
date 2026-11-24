@@ -1,0 +1,44 @@
+# Desktop AI Assistant Configuration
+
+# Brain (LLM Orchestrator)
+llm:
+  provider: "gemini"     # "gemini" or "lm_studio"
+  lm_studio:
+    base_url: "http://localhost:1234/v1"
+    model: "openai/local-model"
+    temperature: 0.7
+  gemini:
+    api_key: "${GEMINI_API_KEY}"  # Or set in .env file or environment variable
+    model: "gemini/gemini-3.5-flash-lite"
+    temperature: 0.7
+
+# Ears & Mouth (Voice Engine)
+voice:
+  enabled: true
+  wake_keyword: "liny"            # Wake word: 'liny'
+  whisper_model: "base.en"        # Speech recognition model
+  silence_timeout: 1.5            # Seconds of silence after speech before triggering transcription
+  sample_rate: 16000              # Standard speech recognition sample rate
+  energy_threshold: 65.0          # RMS energy threshold for VAD speech vs silence detection
+  tts_voice: "en-US-ChristopherNeural"  # Edge-TTS voice
+  tts_rate: "+0%"
+  tts_volume: "+0%"
+  tts_engine: "edge-tts"          # "edge-tts" with local SAPI fallback
+
+# Hands (Action Engine)
+actions:
+  pyautogui_failsafe: true
+  screenshot_dir: "screenshots"
+
+# Global System-Wide Shortcuts
+hotkeys:
+  enabled: true
+  summon: "<ctrl>+<alt>+<space>"     # Summon / Toggle floating widget or quick command bar
+  voice_trigger: "<ctrl>+<alt>+m"    # Quick voice trigger (starts VAD recording without wake word)
+  emergency_abort: "<ctrl>+<alt>+x"  # Emergency abort (cancels active speech, recording, or automation)
+
+# Interface
+ui:
+  theme: "dark"
+  fab_size: 68
+  always_on_top: true
